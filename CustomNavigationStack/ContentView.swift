@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
+    defaultNavigationStack
+  }
+}
+
+private extension ContentView {
+  private var defaultNavigationStack: some View {
     NavigationStack {
       ZStack {
         Color.green.ignoresSafeArea()
