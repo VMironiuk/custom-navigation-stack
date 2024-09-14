@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CustomNavigationBar: View {
+  @Environment(\.dismiss) private var dismiss
   @State private var showBackButton: Bool = true
   @State private var title: String = "Title"
   @State private var subtitle: String? = "Subtitle"
@@ -36,6 +37,7 @@ struct CustomNavigationBar: View {
 private extension CustomNavigationBar {
   private var backButton: some View {
     Button {
+      dismiss()
     } label: {
       Image(systemName: "chevron.left")
     }

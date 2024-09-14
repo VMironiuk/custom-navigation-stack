@@ -9,7 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-    defaultNavigationStack
+    CustomNavigationStack {
+      ZStack {
+        Color.green.ignoresSafeArea()
+        
+        CustomNavigationLink {
+          Text("Destination")
+        } label: {
+          Text("Navigate")
+        }
+      }
+      .navigationDestination(for: String.self) { destination in
+        Text(destination)
+      }
+    }
   }
 }
 
