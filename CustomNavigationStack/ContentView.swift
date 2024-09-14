@@ -15,10 +15,14 @@ struct ContentView: View {
         
         CustomNavigationLink {
           Text("Destination")
+            .customNavigationTitle("Destination")
+            .customNavigationSubtitle("Second Screen")
         } label: {
           Text("Navigate")
         }
       }
+      .showBackButton(false)
+      .customNavigationTitle("Main Screen")
       .navigationDestination(for: String.self) { destination in
         Text(destination)
       }

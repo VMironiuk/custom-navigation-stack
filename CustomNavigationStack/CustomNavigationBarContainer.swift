@@ -9,6 +9,9 @@ import SwiftUI
 
 struct CustomNavigationBarContainer<Content: View>: View {
   var content: Content
+  @State private var showBackButton: Bool = true
+  @State private var title: String = "Title"
+  @State private var subtitle: String? = "Subtitle"
   
   init(@ViewBuilder content: () -> Content) {
     self.content = content()
@@ -16,9 +19,22 @@ struct CustomNavigationBarContainer<Content: View>: View {
   
   var body: some View {
     VStack(spacing: 0) {
-      CustomNavigationBar()
+      CustomNavigationBar(
+        showBackButton: showBackButton,
+        title: title,
+        subtitle: subtitle
+      )
       content
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+    .onPreferenceChange(CustomNavigationBarTitlePreferenceKey.self) { value in
+      title = value
+    }
+    .onPreferenceChange(CustomNavigationBarSubtitlePreferenceKey.self) { value in
+      subtitle = value
+    }
+    .onPreferenceChange(CustomNavigationBarShowBackButtonPreferenceKey.self) { value in
+      showBackButton = value
     }
   }
 }
@@ -29,6 +45,8 @@ struct CustomNavigationBarContainer<Content: View>: View {
       Color.green.ignoresSafeArea()
       Text("Content")
         .foregroundStyle(.white)
+        .customNavigationTitle("Title")
+        .customNavigationSubtitle("Subtitle")
     }
   }
 }

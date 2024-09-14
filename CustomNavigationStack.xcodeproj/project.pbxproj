@@ -15,6 +15,7 @@
 		2E1E98402C95D39F007FD102 /* CustomNavigationBarContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E983F2C95D39F007FD102 /* CustomNavigationBarContainer.swift */; };
 		2E1E98422C95D731007FD102 /* CustomNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E98412C95D731007FD102 /* CustomNavigationStack.swift */; };
 		2E1E98442C95D9CB007FD102 /* CustomNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E98432C95D9CB007FD102 /* CustomNavigationLink.swift */; };
+		2E1E98462C95E071007FD102 /* CustomNavigationBarPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1E98452C95E071007FD102 /* CustomNavigationBarPreferenceKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		2E1E983F2C95D39F007FD102 /* CustomNavigationBarContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarContainer.swift; sourceTree = "<group>"; };
 		2E1E98412C95D731007FD102 /* CustomNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationStack.swift; sourceTree = "<group>"; };
 		2E1E98432C95D9CB007FD102 /* CustomNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationLink.swift; sourceTree = "<group>"; };
+		2E1E98452C95E071007FD102 /* CustomNavigationBarPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarPreferenceKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				2E1E983D2C95CF76007FD102 /* CustomNavigationBar.swift */,
 				2E1E983F2C95D39F007FD102 /* CustomNavigationBarContainer.swift */,
 				2E1E98432C95D9CB007FD102 /* CustomNavigationLink.swift */,
+				2E1E98452C95E071007FD102 /* CustomNavigationBarPreferenceKeys.swift */,
 				2E1E98332C95C91A007FD102 /* Assets.xcassets */,
 				2E1E98352C95C91A007FD102 /* Preview Content */,
 			);
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1E98462C95E071007FD102 /* CustomNavigationBarPreferenceKeys.swift in Sources */,
 				2E1E98402C95D39F007FD102 /* CustomNavigationBarContainer.swift in Sources */,
 				2E1E98422C95D731007FD102 /* CustomNavigationStack.swift in Sources */,
 				2E1E98442C95D9CB007FD102 /* CustomNavigationLink.swift in Sources */,

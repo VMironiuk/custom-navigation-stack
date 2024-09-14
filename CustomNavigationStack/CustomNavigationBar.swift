@@ -9,9 +9,9 @@ import SwiftUI
 
 struct CustomNavigationBar: View {
   @Environment(\.dismiss) private var dismiss
-  @State private var showBackButton: Bool = true
-  @State private var title: String = "Title"
-  @State private var subtitle: String? = "Subtitle"
+  let showBackButton: Bool
+  let title: String
+  let subtitle: String?
   
   var body: some View {
     HStack {
@@ -57,7 +57,11 @@ private extension CustomNavigationBar {
 
 #Preview {
   VStack {
-    CustomNavigationBar()
+    CustomNavigationBar(
+      showBackButton: true,
+      title: "Title",
+      subtitle: "Subtitle"
+    )
     Spacer()
   }
 }
