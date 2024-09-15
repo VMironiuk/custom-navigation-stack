@@ -24,7 +24,6 @@ struct CustomNavigationLink<Destination: View, Label: View>: View {
       CustomNavigationBarContainer {
         destination
       }
-      .toolbar(.hidden)
     } label: {
       label
     }
@@ -32,7 +31,7 @@ struct CustomNavigationLink<Destination: View, Label: View>: View {
 }
 
 #Preview {
-  CustomNavigationStack {
+  CustomNavigationStack(path: .constant(NavigationPath())) {
     CustomNavigationLink {
       Text("Destination")
     } label: {

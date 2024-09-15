@@ -27,6 +27,7 @@ struct CustomNavigationBarContainer<Content: View>: View {
       content
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
+    .toolbar(.hidden)
     .onPreferenceChange(CustomNavigationBarTitlePreferenceKey.self) { value in
       title = value
     }

@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct CustomNavigationStack<Content: View>: View {
+  let path: Binding<NavigationPath>
   let content: Content
   
-  init(@ViewBuilder content: () -> Content) {
+  init(path: Binding<NavigationPath>, @ViewBuilder content: () -> Content) {
+    self.path = path
     self.content = content()
   }
   
   var body: some View {
-    NavigationStack {
+    NavigationStack(path: path) {
       CustomNavigationBarContainer {
         content
       }
@@ -24,7 +26,7 @@ struct CustomNavigationStack<Content: View>: View {
 }
 
 #Preview {
-  CustomNavigationStack {
+  CustomNavigationStack(path: .constant(NavigationPath())) {
     Color.orange.ignoresSafeArea()
   }
 }
